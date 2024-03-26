@@ -9,6 +9,8 @@ public class ClassMain05 {
     	Student s1 = new Student();
     	Subject s2 = new Subject();
     	
+    	
+    	
     	s1.id();
     	s1.name();
     	s1.score();
