@@ -17,9 +17,12 @@ public class Student1_Oh_T {
         this.name = name;
         this.subject = subject;   // 기본생성자에 필드값을 초기화해줘도 생성자에 아규먼트 값을 주면 값이 아규먼트 값으로 변경됨.
     }
-//    public Student1_Oh_T() {    
-//    	this.subject = new Subject(english, korean, math, science) //subject 객체 만들어준거임.
-//    }
+ // 생성자 (3)
+    public Student1_Oh_T(int id, String name, int korean, int english, int math, int science) {
+        this.id = id;
+        this.name = name;
+        this.subject = new Subject1_Oh_T (korean, english, math, science);
+    }
     
     
     // 메서드: 학생의 정보(번호, 이름, 각 과목의 점수, 총점, 평균)를 출력.
@@ -27,7 +30,7 @@ public class Student1_Oh_T {
         System.out.println("----- 학생 정보 -----");
         System.out.println("번호: " + id);
         System.out.println("이름: " + name);
-        System.out.println("국어: " + subject.english);
+        System.out.println("국어: " + subject.korean);
         System.out.println("영어: " + subject.english);
         System.out.println("수학: " + subject.math);
         System.out.println("과학: " + subject.science);

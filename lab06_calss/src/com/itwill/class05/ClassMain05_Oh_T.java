@@ -20,8 +20,16 @@ public class ClassMain05_Oh_T {
         subject2.info();
         
         // 아규먼트를 갖는 생성자를 사용해서 Student 타입의 객체를 생성
-        Student1_Oh_T student1 = new Student1_Oh_T (1, "홍길동", null);
+        Student1_Oh_T student1 = new Student1_Oh_T (1, "홍길동", subject2);
         student1.info();
+        
+     // 기본 생성자를 사용해서 Student 타입의 객체를 생성
+        Student1_Oh_T student2 = new Student1_Oh_T();
+        student2.info();
+        
+        // Student 생성자 (3)을 사용해서 객체 생성
+        Student1_Oh_T student3 = new Student1_Oh_T(10, "오쌤", 10, 20, 30, 25);
+        student3.info();
         
     }
     
