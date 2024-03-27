@@ -24,10 +24,11 @@ public class Account {
 	 * deposit(입금). 현재 잔고에 입금액을 더하고, 입금 후에 잔액을 리턴.
 	 * @param  amount 입금액
 	 * @return  입금 후 잔고.balance
+	 * 
 	 */
-	public int deposit (int amount, int balance) {
-		balance += amount; 
-		return balance;
+	public int deposit (int amount) {		
+		this.balance += amount;		
+		return this.balance;
 	}
 	
 	/**
@@ -35,22 +36,22 @@ public class Account {
 	 * @param amount 출금액
 	 * @return 출금 후 잔고
 	 */
-	public int withdraw (int amount, int balance) {
-		balance -= amount;
-		return balance;
+	public int withdraw (int amount) {
+		this.balance -= amount;
+		return this.balance;
 	}
 	
 	/**
 	 * tranfer(이체). 내 계좌의 잔고에서는  amount를 빼고, 이체할계좌에 to의 계좌 잔고에서는 이체금액 amount 더함
 	 * @param to 이체할 계좌.(account타입)
 	 * @param amount 이체할 금액.
+	 * @return true.
 	 */
-	public return transfer (int amount, int to) {
-		int result = 0;
-		balance -= amount;
-		to = this.accountNo;
-		result = balance 
-		return result;
+	public boolean transfer (Account to, int amount) {
+		this.balance -= amount; //내계좌에서 출금.
+		to.balance += amount;  //상대방 계좌에 입금.   to.balnce ==account2.balance  
+		//if(this.balance < to.balance) 
+		return true;
 		 
 	}
 	
