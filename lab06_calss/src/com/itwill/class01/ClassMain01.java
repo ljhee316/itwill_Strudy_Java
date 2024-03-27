@@ -1,4 +1,4 @@
-package com.itwill.calss01;
+package com.itwill.class01;
 
 /*
  * 객체지향 프로그래밍 언어(object-oriented Programming Language) : Java, C++, c#, kotlin, ...

@@ -1,4 +1,4 @@
-package com.itwill.calss03;
+package com.itwill.class03;
 
 public class ClassMain03 {
 	

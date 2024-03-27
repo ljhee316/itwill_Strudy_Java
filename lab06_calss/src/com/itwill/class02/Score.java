@@ -1,4 +1,4 @@
-package com.itwill.calss02;
+package com.itwill.class02;
 
 
 // 클래스(class): 객체 설계도. 데이터(필드) + 생성자 + 기능(메서드) => 변수 타입.

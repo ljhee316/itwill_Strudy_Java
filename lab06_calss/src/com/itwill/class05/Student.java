@@ -7,8 +7,7 @@ public class Student {
 	Subject subject; // 수강 과목
 
 	// TODO 생성자: (1)기본 생성자. (2)아규먼트를 갖는 생성자.
-	public Student() {
-	}
+	public Student() {}
 
 	public Student(int id, String name, Subject subject) {
 		this.id = id;
@@ -26,6 +25,7 @@ public class Student {
 	}
 
 	public void score() {
+
 		if (subject != null) {
 			System.out.println("korean: " + subject.korean);
 			System.out.println("english: " + subject.english);

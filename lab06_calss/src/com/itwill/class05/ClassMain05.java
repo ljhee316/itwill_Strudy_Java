@@ -7,7 +7,17 @@ public class ClassMain05 {
 
 		Student s1 = new Student();
 		Subject s2 = new Subject();
-
+//		System.out.println("국어: " + s2.korean);
+//		System.out.println("영어: " + s2.english);
+//		System.out.println("수학: " + s2.math);
+//		System.out.println("과학: " + s2.science);
+//		System.out.println("총첨: " + s2.total());
+//		System.out.println("평균: " + s2.average());
+//		System.out.println("====================");
+		s2.info();
+		System.out.println("================");
+		
+		//Subject subjuct2 = s2.Subject(0, 0, 0, 0);
 		s1.idNumber();
 		s1.name();
 		s1.score();
