@@ -53,6 +53,27 @@ public class ModifierMain06 {
 		ModifierMain06 app = new ModifierMain06("버스파업");  //생성자 불러옴.(heap영역에 만들어주기위해)
 		System.out.println(app.message);
 		//app.message = "버스";  상수이기때문에 재할당 안됨.
+		
+		
+		//Test 클래스의 static 멤버사용:
+		System.out.println("Test ; " + Test.y); //static 필드는 객체생성과 상관없이 불러오고 
+		Test.y = 100;  //static 필드는 객체생성과 상관없이  값 변경 가능.
+		System.out.println("Test ; " + Test.y); //static 필드는 객체생성과 상관없이  출력가능.
+		Test.printField2();  //메소드 불러옴.
+		
+		//Test 클래스의 인스턴스 멤버사용: 먼저 객체생성해야함.
+		Test test = new Test();
+		System.out.println("test.x = " + test.x);
+		test.x = 100;
+		test.printField();
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 	
