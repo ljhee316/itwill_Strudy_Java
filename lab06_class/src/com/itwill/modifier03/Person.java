@@ -21,9 +21,11 @@ public class Person {
 		return this.age = age;
 	}
 
-	public void setAge(int age) {
-		if(age != 0) {
-			this.age = age;			
-		}
+//	public void setAge(int age) {
+//		if(age <= 0) {
+//			throw new IllegalArgumentException();
+//		}else {
+//			this.age  = age;		
+//		}
 	}
-}
+

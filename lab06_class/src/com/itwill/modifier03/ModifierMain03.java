@@ -20,12 +20,15 @@ public class ModifierMain03 {
 		member.setPassword("5678"); // setter메서드
 		System.out.println("변경후 PW: " + member.getPassword());
 
+//		Person person = new Person("가나다",-3);
+//		System.out.println(person.getAge());
 		
-		Person person = new Person("가나다",25);
-		System.out.println("이름: " + person.getName());
-		System.out.println("나이: " + person.getAge());
-		person.setAge(26);
-		System.out.println("수정된 나이: " + person.getAge());
+		
+//		Person person = new Person("가나다",25);
+//		System.out.println("이름: " + person.getName());
+//		System.out.println("나이: " + person.getAge());
+//		person.setAge(26);
+//		System.out.println("수정된 나이: " + person.getAge());
 		
 		
 		

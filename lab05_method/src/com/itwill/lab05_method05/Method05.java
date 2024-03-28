@@ -1,21 +1,6 @@
 package com.itwill.lab05_method05;
 
 public class Method05 {
-
-	public static void main(String[] args) {
-		// TODO 메서드 호출, 그결과를 출력
-		
-		int[] array = {1, 4, 3, 5};
-		//sum 호출
-		int total = sum(array);
-		double mean = mean(array);
-		System.out.println("sum: " + total);
-		System.out.println("mean: " + mean);
-		System.out.println("max: " + max(array));
-		System.out.println("min: " +min(array));
-			
-	
-	}//메인끝
 	/**
 	 * sum
 	 * 아규먼트로 전달받은 정수들의 1차원 배열의 모든 원소들의 합을 리턴.
@@ -49,7 +34,7 @@ public class Method05 {
 //		result = (double)sum / array.length;    
 //		}
 //		return result;
-	
+		
 		
 	}		
 	/**
@@ -82,5 +67,20 @@ public class Method05 {
 		}
 		return min;
 	}
+	
+	public static void main(String[] args) {
+		// TODO 메서드 호출, 그결과를 출력
+		
+		int[] array = {1, 4, 3, 5};
+		//sum 호출
+		int total = sum(array);
+		double mean = mean(array);
+		System.out.println("sum: " + total);
+		System.out.println("mean: " + mean);
+		System.out.println("max: " + max(array));
+		System.out.println("min: " +min(array));
+			
+	
+	}//메인끝
 
 }

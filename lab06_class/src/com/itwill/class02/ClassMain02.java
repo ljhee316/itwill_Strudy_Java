@@ -7,7 +7,7 @@ public class ClassMain02 {
         Score score1 = new Score(); //-> 모든 필드는 기본값으로 생성됨.
         System.out.println("java = " + score1.java);
         
-        // score1 인스턴스의 필드 값 변경:
+        // score1 인스턴스(객체)의 필드 값 변경:   기본생성자를 이용해서 아규먼트를 입력해서 메서드호출하기.
         score1.java = 100;
         score1.sql = 90;
         score1.javascript = 85;
