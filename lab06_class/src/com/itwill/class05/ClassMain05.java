@@ -9,7 +9,7 @@ public class ClassMain05 {
 		Subject s2 = new Subject();
 //		System.out.println("국어: " + s2.korean);
 //		System.out.println("영어: " + s2.english);
-//		System.out.println("수학: " + s2.math);
+//		System.out.println("수`학: " + s2.math);
 //		System.out.println("과학: " + s2.science);
 //		System.out.println("총첨: " + s2.total());
 //		System.out.println("평균: " + s2.average());

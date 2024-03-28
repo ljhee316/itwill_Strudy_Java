@@ -6,8 +6,6 @@ public class ContactMain {
 	// 필드
 	private static final int MAX_LENGTH = 3;// 연락처 배열의 최대길이(원소개수)
 
-	// private Contact contact = new Contact();
-
 	private Scanner scanner = new Scanner(System.in);
 	private Contact[] contacts = new Contact[MAX_LENGTH]; // 연락처를 저장하기위한 배열.
 	private int count = 0; // 현재까지 연락처배열에 저장된 개수. 연락처 저장 할 인덱스위치를 정하기위해.
@@ -60,19 +58,26 @@ public class ContactMain {
 	}
 
 	private void saveNewContact() {
-		System.out.println("\n----새 연락처 저장----");
-		System.out.print("이름 입력>>> ");
-		String name = scanner.nextLine();
-		System.out.print("전화번호 입력>>> ");
-		String phone = scanner.nextLine();
-		System.out.print("이메일 입력>>> ");
-		String email = scanner.nextLine();
+		try {
+			if (count < contacts.length) {
+				System.out.println("\n----새 연락처 저장----");
+				System.out.print("이름 입력>>> ");
+				String name = scanner.nextLine();
+				System.out.print("전화번호 입력>>> ");
+				String phone = scanner.nextLine();
+				System.out.print("이메일 입력>>> ");
+				String email = scanner.nextLine();
+				Contact contact = new Contact(name, phone, email);
+				// Contact 타입 객체를 연락처 배열 인덱스 count에 저장.
+				contacts[count] = contact;
+				// 저장 후에는 연락처 저장 개수 증가해서 저장.
+				count++;
+			} else if (count == contacts.length) {
+				System.out.println("메모리가 꽉 찼습니다.");
+			}
 
-		Contact contact = new Contact(name, phone, email);
-		// Contact 타입 객체를 연락처 배열 인덱스 count에 저장.
-		contacts[count] = contact;
-		// 저장 후에는 연락처 저장 개수 증가해서 저장.
-		count++;
+		} catch (java.lang.ArrayIndexOutOfBoundsException e1) {
+		}
 	}
 
 	private void readAllContacts() {
@@ -86,19 +91,32 @@ public class ContactMain {
 		System.out.println("\n----인덱스 검색----");
 		System.out.print("인덱스 입력>>> ");
 		int index = Integer.parseInt(scanner.nextLine());
-//		if (contacts[index] != null ) {
-//			System.out.println(contacts[index].toString());		
-//		}else if (contacts[index] == null) {
-//			System.out.println("다시 입력해주세요");			
-//		}
-		if (contacts[index] != null) {
-			System.out.println(contacts[index].toString());
-		} else if (contacts[index] == null) {
-			System.out.println("다시 입력해주세요");
+		try {
+			if (contacts[index] != null)
+				System.out.println(contacts[index].toString());
+		} catch (java.lang.ArrayIndexOutOfBoundsException e2) {
+			System.out.println("연락처가 없습니다");
 		}
 	}
 
+//		
+//		if (contacts[index] != null) {
+//			if (count < MAX_LENGTH) {
+//				System.out.println(contacts[index].toString());
+//			} else {
+//				System.out.println("다시 입력해주세요");
+//			}
+//		} else if (contacts[index] == null) {
+//			System.out.println("다시 입력해주세요");
+//			if (count <= contacts.length) {
+//				System.out.println("다시 입력해주세요");
+//			}
+//		}
+//	}    
+
 	private void updateContactByIndex() {
+		try {
+		if (count <= contacts.length) {
 		System.out.println("\n----연락처 수정----");
 		System.out.print("인덱스 입력>>> ");
 		int index = Integer.parseInt(scanner.nextLine());
@@ -112,6 +130,9 @@ public class ContactMain {
 		contacts[index].setName(name);
 		contacts[index].setEmail(email);
 		contacts[index].setPhone(phone);
-
+		}
+		}catch(java.lang.ArrayIndexOutOfBoundsException e3) {
+			System.out.println("변경 할 연락처가 없습니다.");
+		}
 	}
 }
