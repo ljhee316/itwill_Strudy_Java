@@ -1,5 +1,7 @@
 package com.itwill.modifier06;
 
+import java.time.LocalDate;
+
 /*
  * 접근수식어 : 지역변수에는 사용할 수 없다.
  * 
@@ -56,9 +58,9 @@ public class ModifierMain06 {
 		
 		
 		//Test 클래스의 static 멤버사용:
-		System.out.println("Test ; " + Test.y); //static 필드는 객체생성과 상관없이 불러오고 
+		System.out.println("Test : " + Test.y); //static 필드는 객체생성과 상관없이 불러오고 
 		Test.y = 100;  //static 필드는 객체생성과 상관없이  값 변경 가능.
-		System.out.println("Test ; " + Test.y); //static 필드는 객체생성과 상관없이  출력가능.
+		System.out.println("Test : " + Test.y); //static 필드는 객체생성과 상관없이  출력가능.
 		Test.printField2();  //메소드 불러옴.
 		
 		//Test 클래스의 인스턴스 멤버사용: 먼저 객체생성해야함.
@@ -66,9 +68,6 @@ public class ModifierMain06 {
 		System.out.println("test.x = " + test.x);
 		test.x = 100;
 		test.printField();
-		
-		
-		
 		
 		
 		

@@ -12,7 +12,7 @@ public class Test {
 		System.out.println("y = " + y); //이미메서드영역에 만들어져있기때문에 y 사용가능.
 		System.out.println("------------------------");  //인스턴스 메서드는 stactic 필드 사용도 가능.
 	}
-	
+		
 	
 	//static 메서드
 	public static void printField2() {  //static 생성자부르지않아도 메서드사용가능함.
